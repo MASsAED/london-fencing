@@ -1,5 +1,7 @@
 // app/page.tsx
 import Link from "next/link";
+import Image from "next/image";
+
 
 const services = [
   {
@@ -47,14 +49,19 @@ export default function HomePage() {
       <header className="sticky top-0 z-30 border-b border-white/60 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-0">
           {/* Logo / Name */}
-          <a href="#top" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-2xl bg-emerald-600 text-sm font-bold text-white shadow-md">
-              LF
-            </div>
-            <span className="text-sm font-semibold tracking-tight">
-              London Wood Fencing
-            </span>
-          </a>
+<a href="#top" className="flex items-center gap-2">
+  <Image
+    src="/logo.png"
+    alt="London Fencing logo"
+    width={34}
+    height={34}
+    className="rounded-xl"
+  />
+  <span className="text-sm font-semibold tracking-tight">
+    London Fencing
+  </span>
+</a>
+
 
           {/* Simple menu */}
           <nav className="hidden gap-5 text-xs font-medium text-slate-700 sm:flex">
